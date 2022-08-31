@@ -1,28 +1,28 @@
-const express = require('express')
+const express = require('express') // framework to make it all work
 const app = express()
-const mongoose = require('mongoose')
-const passport = require('passport')
-const session = require('express-session')
-const MongoStore = require('connect-mongo')(session)
-const flash = require('express-flash')
-const logger = require('morgan')
-const connectDB = require('./config/database')
-const mainRoutes = require('./routes/main')
-const todoRoutes = require('./routes/todos')
+const mongoose = require('mongoose') //mongo model thingy
+const passport = require('passport') // local authentication framework (user accounts)
+const session = require('express-session') //saving session data
+const MongoStore = require('connect-mongo')(session) //maintains your mongo session
+const flash = require('express-flash') // "Flash is an extension of connect-flash with the ability to define a flash message and render it without redirecting the request."
+const logger = require('morgan') //middleware for console logging stuff
+const connectDB = require('./config/database')  //mondo db connection
+const mainRoutes = require('./routes/main') //router
+const todoRoutes = require('./routes/todos') //router
 
-require('dotenv').config({path: './config/.env'})
+require('dotenv').config({path: './config/.env'}) // env file to hold our secret non-public data
 
 // Passport config
 require('./config/passport')(passport)
 
 connectDB()
 
-app.set('view engine', 'ejs')
-app.use(express.static('public'))
+app.set('view engine', 'ejs') // how to render content, use EJS content 
+app.use(express.static('public')) // use express to handle public files like html and css ?
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(logger('dev'))
-// Sessions
+// Sessions (creates our mongoose session)
 app.use(
     session({
       secret: 'keyboard cat',
@@ -32,15 +32,16 @@ app.use(
     })
   )
   
-// Passport middleware
+// Passport middleware (starts up the passport log in session)
 app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(flash())
   
-app.use('/', mainRoutes)
-app.use('/todos', todoRoutes)
+app.use('/', mainRoutes) //router for root path
+app.use('/todos', todoRoutes) //router for todos path
  
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')
 })    
+
