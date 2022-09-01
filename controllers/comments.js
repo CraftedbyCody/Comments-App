@@ -11,7 +11,7 @@ module.exports = {
         try{
             const commentsItems = await Comments.find() //grab all objects
             //maybe we need to cap how many results we get to a reasonable number
-            //const itemsLeft = await Comments.countDocuments({userId:req.user.id,completed: false}) //we dont need this
+            const itemsLeft = await Comments.countDocuments({userId:req.user.id,completed: false}) //we dont need this
             
             res.render('comments.ejs', {comments: commentsItems, left: itemsLeft, user: req.user})
         }catch(err){
