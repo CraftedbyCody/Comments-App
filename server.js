@@ -1,3 +1,4 @@
+//Anything with todo or todos tag needs to be changed to comments
 const express = require('express') // framework to make it all work
 const app = express()
 const mongoose = require('mongoose') //mongo model thingy
@@ -8,7 +9,7 @@ const flash = require('express-flash') // "Flash is an extension of connect-flas
 const logger = require('morgan') //middleware for console logging stuff
 const connectDB = require('./config/database')  //mondo db connection
 const mainRoutes = require('./routes/main') //router
-const todoRoutes = require('./routes/todos') //router
+const commentsRoutes = require('./routes/comments') //router
 
 require('dotenv').config({path: './config/.env'}) // env file to hold our secret non-public data
 
@@ -39,7 +40,7 @@ app.use(passport.session())
 app.use(flash())
   
 app.use('/', mainRoutes) //router for root path
-app.use('/todos', todoRoutes) //router for todos path
+app.use('/comments', commentsRoutes) //router for comments path
  
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')

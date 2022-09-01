@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({ //Need to add edits to schema like date and comment string
   userName: { type: String, unique: true },
   email: { type: String, unique: true },
   password: String

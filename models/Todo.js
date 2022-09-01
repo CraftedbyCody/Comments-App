@@ -1,7 +1,15 @@
 const mongoose = require('mongoose')
 
-const TodoSchema = new mongoose.Schema({
-  todo: {
+//timestamp need to choose date format to display
+//userid
+//username
+//comment string
+
+
+//bonus: number of likes
+
+const CommentSchema = new mongoose.Schema({
+  comments: {
     type: String,
     required: true,
   },
@@ -15,4 +23,4 @@ const TodoSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Todo', TodoSchema)
+module.exports = mongoose.model('Comments', commentschema)

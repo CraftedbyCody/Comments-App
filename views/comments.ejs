@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Comments</h1> 
+    <ul> 
+ <!-- me go eat--> 
+
+    <!-- if signed in, show Write new comment button -->
+
+    <!-- display only first 5 -->
+    <% comments.forEach( el => { %>
+            <li class='commentsItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.comments %></span>
+                <span class='del'> Delete </span>
+                <!--If current user == post username, show edit and delete buttons-->
+            </li>
+    <% }) %>    
+    </ul>
+    <!-- add option to show more, 5 at a time-->
+    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+
+    <!-- check that comment is not blank-->
+    <form action="/comments/createComments" method='POST'>
+        <input type="text" placeholder="Enter Comments Item" name='commentsItem'>
+        <input type="submit">
+    </form>
+
+    <a href="/logout">Logout</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -13,4 +13,4 @@ router.post('/signup', authController.postSignup) // send new user account
 
 module.exports = router // shorthand aka alias so we dont have to type module.exports, just type router
 
-//initislized?
+//initialized?
