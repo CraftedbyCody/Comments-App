@@ -3,7 +3,7 @@ const router = express.Router()
 const commentsController = require('../controllers/comments') 
 const { ensureAuth } = require('../middleware/auth')
 
-router.get('/', ensureAuth, commentsController.getcomments) // when on the comments page, make sure theyre logged in, then send comments data from controller
+router.get('/', ensureAuth, commentsController.getComments) // when on the comments page, make sure theyre logged in, then send comments data from controller
 
 router.post('/createComments', commentsController.createComments) // when user submits comments item it routes to create comments controller.
 
