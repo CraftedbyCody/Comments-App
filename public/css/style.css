@@ -1,5 +1,9 @@
 /** LAYOUT **/
 
+* {
+    font-size: 16px;
+}
+
 body {
     background: #E6E6E6;
     font-family: 'Courier New', Courier, monospace;
@@ -39,4 +43,21 @@ nav {
 
 h1{
     color: #fff;
+}
+
+.del {
+
+    border-radius: 3px;
+    background-color: #ef798a;
+    height: 30px;
+    width: 120px;
+
+
+    font-size: 1em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+
+
+
 }
