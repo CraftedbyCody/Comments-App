@@ -1,10 +1,42 @@
+/** LAYOUT **/
+
+body {
+    background: #E6E6E6;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #297373;
+    height: 14%;
+    width: 100%;
+    padding: 1em;
+}
+
+#auth {
+    margin: 0 0 0 -1em;
+}
+
+#auth li {
+    background: #85FFC7;
+    color: #297373;
+    display: inline-block;
+    font-size: .9em;
+    padding: .5em;
+}
+
+#auth a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#title {
+    
+}
+
+/** ADDITIONAL STYLES **/
+
 h1{
-    color: red;
-}
-.completed{
-    text-decoration: line-through;
-    color: gray;
-}
-.not{
-    text-decoration: underline;
+    color: #fff;
 }

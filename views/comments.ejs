@@ -5,59 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
-    <h1>Comments</h1> 
-    <ul> 
-
-    <!-- if signed in, show Write new comment button -->
-
-    <!-- display only first 5 -->
-
-    <% let count = 5 %>
-    <% let firstFive = [1, 2, 3, 4, 5] %>
-    <% let firstFiveShown = firstFive.slice(0,size) %>
-
-    <% let count = 0 %>
-    <% let someArray = [1, "Pony Meat", 3, 4, 5] %>
-    <% someArray[1] %>
-    <% for (let i=0; i < 5; i++) { %>
-        comment[i]
-        <li class='commentsItem' data-id='<%=._id%>'>
-            <p><%= el.comments %></p>
-            <span><%= el.timeStamp %></span>
-            <span><%= el.userName %></span>
-            <% if (currentUserId == el.userId) { %>
-                
-                <span class="del">Delete</span>
-                
-            <% } %>
-        </li>
-
-    <% } %>
-    <% comments.forEach( el => { %>
-            <li class='commentsItem' data-id='<%=el._id%>'>
-                <p><%= el.comments %></p>
-                <span><%= el.timeStamp %></span>
-                <span><%= el.userName %></span>
-                <% if (currentUserId == el.userId) { %>
-                    
-                    <span class="del">Delete</span>
-                    
-                <% } %>
+    <nav>
+        <h1>Comments</h1> 
+        <ul id="auth">
+            <li>
+                <a href="/logout">Logout</a>
             </li>
-    <% }) %>    
-    </ul>
-    <!-- add option to show more, 5 at a time-->
+        </ul>
+    </nav>
+    <section>
+        <ul> 
 
-    <!-- check that comment is not blank-->
-    <form action="/comments/createComments" method='POST'>
-        <input type="text" placeholder="Enter Comments Item" name='commentsItem'>
-        <input type="submit">
-    </form>
+            <!-- if signed in, show Write new comment button -->
+        
+            <!-- display only first 5 -->
+        
+            <% let count = 5 %>
+            <% let firstFive = [1, 2, 3, 4, 5] %>
+            <% let firstFiveShown = firstFive.slice(0,size) %>
+        
+            <% let count = 0 %>
+            <% let someArray = [1, "Pony Meat", 3, 4, 5] %>
+            <% someArray[1] %>
+            <% for (let i=0; i < 5; i++) { %>
+                comment[i]
+                <li class='commentsItem' data-id='<%=._id%>'>
+                    <p><%= el.comments %></p>
+                    <span><%= el.timeStamp %></span>
+                    <span><%= el.userName %></span>
+                    <% if (currentUserId == el.userId) { %>
+                        
+                        <span class="del">Delete</span>
+                        
+                    <% } %>
+                </li>
+        
+            <% } %>
+            <% comments.forEach( el => { %>
+                    <li class='commentsItem' data-id='<%=el._id%>'>
+                        <p><%= el.comments %></p>
+                        <span><%= el.timeStamp %></span>
+                        <span><%= el.userName %></span>
+                        <% if (currentUserId == el.userId) { %>
+                            
+                            <span class="del">Delete</span>
+                            
+                        <% } %>
+                    </li>
+            <% }) %>    
+            </ul>
+            <!-- add option to show more, 5 at a time-->
+        
+            <!-- check that comment is not blank-->
+            <form action="/comments/createComments" method='POST'>
+                <input type="text" placeholder="Enter Comments Item" name='commentsItem'>
+                <input type="submit">
+            </form>
+    </section>
 
-    <a href="/logout">Logout</a>
 
     <script src="js/main.js"></script>
 </body>
