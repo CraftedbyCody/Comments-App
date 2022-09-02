@@ -10,21 +10,46 @@
 <body>
     <h1>Comments</h1> 
     <ul> 
- <!-- me go eat--> 
 
     <!-- if signed in, show Write new comment button -->
 
     <!-- display only first 5 -->
+
+    <% let count = 5 %>
+    <% let firstFive = [1, 2, 3, 4, 5] %>
+    <% let firstFiveShown = firstFive.slice(0,size) %>
+
+    <% let count = 0 %>
+    <% let someArray = [1, "Pony Meat", 3, 4, 5] %>
+    <% someArray[1] %>
+    <% for (let i=0; i < 5; i++) { %>
+        comment[i]
+        <li class='commentsItem' data-id='<%=._id%>'>
+            <p><%= el.comments %></p>
+            <span><%= el.timeStamp %></span>
+            <span><%= el.userName %></span>
+            <% if (currentUserId == el.userId) { %>
+                
+                <span class="del">Delete</span>
+                
+            <% } %>
+        </li>
+
+    <% } %>
     <% comments.forEach( el => { %>
             <li class='commentsItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.comments %></span>
-                <span class='del'> Delete </span>
-                <!--If current user == post username, show edit and delete buttons-->
+                <p><%= el.comments %></p>
+                <span><%= el.timeStamp %></span>
+                <span><%= el.userName %></span>
+                <% if (currentUserId == el.userId) { %>
+                    
+                    <span class="del">Delete</span>
+                    
+                <% } %>
             </li>
     <% }) %>    
     </ul>
     <!-- add option to show more, 5 at a time-->
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
 
     <!-- check that comment is not blank-->
     <form action="/comments/createComments" method='POST'>

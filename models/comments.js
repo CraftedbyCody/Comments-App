@@ -13,13 +13,17 @@ const CommentSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  completed: {
-    type: Boolean,
+  timeStamp: {
+    type: String,
+    required: true,
+  },
+  userName: {
+    type: String,
     required: true,
   },
   userId: {
     type: String,
-    required: true
+    required: true,
   }
 })
 

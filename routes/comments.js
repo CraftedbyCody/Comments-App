@@ -7,9 +7,9 @@ router.get('/', ensureAuth, commentsController.getComments) // when on the comme
 
 router.post('/createComments', commentsController.createComments) // when user submits comments item it routes to create comments controller.
 
-router.put('/markComplete', commentsController.markComplete) // when user marks comments item as complete it routes request to controller.
+//router.put('/markComplete', commentsController.markComplete) // when user marks comments item as complete it routes request to controller.
 
-router.put('/markIncomplete', commentsController.markIncomplete) //when user marks comments item as incomplete it routes request to controller.
+//router.put('/markIncomplete', commentsController.markIncomplete) //when user marks comments item as incomplete it routes request to controller.
 
 router.delete('/deleteComments', commentsController.deleteComments) //
 
