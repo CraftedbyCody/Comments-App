@@ -9,31 +9,6 @@
 </head>
 <body>
 
-    <%
-    function unixToTimestamp(unixTime){
-        const date = new Date(unixTime * 1000);
-      
-        const hours = date.getHours();
-        const minutes = date.getMinutes();
-        const seconds = date.getSeconds();
-        
-        const padTo2Digits = num => num.toString().padStart(2, '0');
-        
-        // format as hh:mm:ss
-        const time = `${padTo2Digits(hours)}:${padTo2Digits(minutes)}:${padTo2Digits(
-          seconds,
-        )}`;
-      
-        const year = date.getFullYear();
-        const month = padTo2Digits(date.getMonth() + 1);
-        const day = padTo2Digits(date.getDate());
-      
-        const dateTime = `${year}-${month}-${day} ${time}`;
-      
-        return dateTime;
-      }
-    %>
-
     <h1>Join the conversation...</h1>
 
     <ul id="comments">
@@ -50,6 +25,7 @@
                     <div class="attribution">
                         
                         <span class="userName"><%= el.userName %></span>
+                        <span class="timestamp"><%= new Date(el.timeStamp * 1).toLocaleString() %></span>
                     </div>
                 </div>
 
