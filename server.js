@@ -10,6 +10,7 @@ const logger = require('morgan') //middleware for console logging stuff
 const connectDB = require('./config/database')  //mondo db connection
 const mainRoutes = require('./routes/main') //router
 const commentsRoutes = require('./routes/comments') //router
+const { MongoClient } = require('mongodb')
 
 require('dotenv').config({path: './config/.env'}) // env file to hold our secret non-public data
 
@@ -41,6 +42,7 @@ app.use(flash())
   
 app.use('/', mainRoutes) //router for root path
 app.use('/comments', commentsRoutes) //router for comments path
+
  
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')

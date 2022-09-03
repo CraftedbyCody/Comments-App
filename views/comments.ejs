@@ -5,30 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Todos</h1>
-    <ul>
-    <% comments.forEach( el => { %>
-            <li class='commentItem' data-id='<%=el._id%>'>
-                <%= el.comments %>
-                <%= el.timeStamp %>
-                <%= el.userName %>
 
-                <% if (currentUserId == el.userId) { %> <span class='del'> Delete </span> <% } %>
+    <%
+    function unixToTimestamp(unixTime){
+        const date = new Date(unixTime * 1000);
+      
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        const seconds = date.getSeconds();
+        
+        const padTo2Digits = num => num.toString().padStart(2, '0');
+        
+        // format as hh:mm:ss
+        const time = `${padTo2Digits(hours)}:${padTo2Digits(minutes)}:${padTo2Digits(
+          seconds,
+        )}`;
+      
+        const year = date.getFullYear();
+        const month = padTo2Digits(date.getMonth() + 1);
+        const day = padTo2Digits(date.getDate());
+      
+        const dateTime = `${year}-${month}-${day} ${time}`;
+      
+        return dateTime;
+      }
+    %>
+
+    <h1>Join the conversation...</h1>
+
+    <ul id="comments">
+
+
+
+        <% let displaySet = 30 %>
+        <% let currentItems = 0; %>
+
+        <%  const displayComments = function(x) { x.forEach ( el => { %> 
+            <li class='commentItem' data-id='<%=el._id%>'>
+                <div class="commentBody">
+                    <p><%= el.comments %></p>
+                    <div class="attribution">
+                        
+                        <span class="userName"><%= el.userName %></span>
+                    </div>
+                </div>
+
+                <% if (currentUserId == el.userId) { %> <span class='del button'> Delete </span> <% } %>
 
             </li>
-    <% }) %>    
+        
+        <% })} %>
+            
+        <% const displayNext = () => {
+            displayComments(comments.slice(currentItems, currentItems + displaySet));
+    
+            if (!(currentItems + displaySet > comments.length)) {
+                currentItems += displaySet;
+            } else {
+                currentItems += (comments.length - currentItems)
+            }
+        } %>
+
+        <% displayNext() %>
+
+
+            
+
+
+        <span class="showMore button" onclick="test()">Show more</span>
+
+        <div id="test"></div>
+        
+        
     </ul>
+    <span class="test"></span>
+
 
     <form action="/comments/createComments" method='POST'>
-        <input type="text" placeholder="Enter Comment" name='commentsItem'>
-        <input type="submit">
+        <textarea id="textBox" rows="4" cols="50" placeholder="Enter Comment" name='commentsItem'></textarea>
+        <input class="button" type="submit">
     </form>
 
-    <a href="/logout">Logout</a>
+    <a href="/logout"><span class="logout button">Logout</span></a>
 
     <script src="js/main.js"></script>
+
 </body>
 </html>

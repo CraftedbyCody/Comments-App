@@ -1,4 +1,5 @@
 const Comments = require('../models/Comments')
+//const Main = require('js/main')
 
 // method to create comment stamped with user id
 // delete comment that belongs to user id
@@ -6,6 +7,7 @@ const Comments = require('../models/Comments')
 
 
 module.exports = {
+
     getComments: async (req,res)=>{ //pulls up comments objs
         console.log(req.user)
         console.log("LOOKATME"+req.user.id)
@@ -13,7 +15,9 @@ module.exports = {
             const commentsItems = await Comments.find() //grab all objects
             //maybe we need to cap how many results we get to a reasonable number
             //const itemsLeft = await Comments.countDocuments({userId:req.user.id,completed: false}) //we dont need this
-            
+            //res.render('../public/js/main.js', {comments: commentsItems, currentUserId: req.user.id})
+            //res.status(200).send('/js/main.js', {comments: "test"})
+            //this.dataDump(commentItems)
             res.render('comments.ejs', {comments: commentsItems, currentUserId: req.user.id})
         }catch(err){
             console.log(err)

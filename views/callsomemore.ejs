@@ -1,0 +1,13 @@
+<% displayNext = () => {
+    displayComments(comments.slice(currentItems, currentItems + displaySet));
+
+    if (!(currentItems + displaySet > comments.length)) {
+        currentItems += displaySet;
+    } else {
+        currentItems += (comments.length - currentItems)
+    }
+} %>
+
+<% include *callsomemore %> 
+
+document.getElementByID('comments').appendChild(li)

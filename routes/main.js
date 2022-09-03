@@ -11,6 +11,12 @@ router.get('/logout', authController.logout) // get the lout out action, and log
 router.get('/signup', authController.getSignup)//retrieves signup info
 router.post('/signup', authController.postSignup) // send new user account 
 
+/*
+app.get('/main', (req, res) => {
+    res.send("test")
+})
+*/
+
 module.exports = router // shorthand aka alias so we dont have to type module.exports, just type router
 
 //initialized?

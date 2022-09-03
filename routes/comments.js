@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router() 
 const commentsController = require('../controllers/comments') 
 const { ensureAuth } = require('../middleware/auth')
+const sendMain = require('../middleware/sendMain')
 
 router.get('/', ensureAuth, commentsController.getComments) // when on the comments page, make sure theyre logged in, then send comments data from controller
 

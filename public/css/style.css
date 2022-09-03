@@ -2,6 +2,9 @@
 
 * {
     font-size: 16px;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -9,6 +12,8 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -39,25 +44,82 @@ nav {
     
 }
 
+li {
+    list-style: none;
+    width: 60%;
+
+    margin: 0 0 15px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.commentBody {
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px -10px #39393A;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.attribution {
+    display: flex;
+    justify-content: end;
+}
+
 /** ADDITIONAL STYLES **/
 
 h1{
-    color: #fff;
+    margin: 10px 0 20px 30px;
+    color: #39393A;
+    font-size: 2rem;
+}
+
+.timeStamp .userName{
+    font-size: 1.2rem;
+
+}
+
+.userName {
+    color: #297373;
+    font-weight: 600;
+}
+
+
+
+.button {
+
+    border-radius: 3px;
+    height: 30px;
+    width: 120px;
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.logout {
+    background-color: #ef798a;
 }
 
 .del {
-
-    border-radius: 3px;
     background-color: #ef798a;
-    height: 30px;
-    width: 120px;
+}
 
+.showMore {
+    background-color: #297373;
+}
 
-    font-size: 1em;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
+.hidden {
+    display: none;
+}
 
-
+#textBox {
 
 }
