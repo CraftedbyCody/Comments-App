@@ -123,3 +123,49 @@ h1{
 #textBox {
 
 }
+
+/* login */
+
+
+.loginContainer{
+    border: 3px solid #297373
+    ;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24em;
+    height: 30em;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 15px 5px #D2D2D2; 
+    box-shadow: 5px 5px 15px 5px #D2D2D2;
+    margin: 0 auto;
+}
+
+#loginSubmitButton{
+    display: block;
+    background-color: #85FFC7;
+    width: 15em;
+    border-radius: 5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.loginAndEmailInput{
+    border: solid 1px black;
+    height: 1.5em;
+    border-radius: 3px;
+    margin-top: 1em;
+    width: 20em; 
+}
+
+.itemsContainer{
+    padding: 1em;
+}
+
+.signinLabel{
+    text-align: center;
+    margin: 0;
+    padding-bottom: 1em;
+}
+
+
