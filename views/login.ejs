@@ -8,6 +8,18 @@
     <title>Document</title>
 </head>
 <body>
+   
+
+<div class="loginContainer">
+<div class="itemsContainer">
+<h1 class="signinLabel">Sign in</h1>
+<h3>Stay updated on the latest conversations</h3>
+    <form action="/login" method="POST">
+        <input class="loginAndEmailInput" type="email" name="email" placeholder="Email">
+        <input class="loginAndEmailInput" type="password" name="password" placeholder="Password">
+        <input id="loginSubmitButton" type="submit">
+    </form>
+
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
@@ -18,11 +30,9 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit">
-    </form>
+
+</div>
+</div>
 </body>
 </html>
 <!-- Glad I learnt about this vs code feature -->

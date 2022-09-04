@@ -26,7 +26,7 @@ module.exports = {
 
     createComments: async (req, res)=>{
         try{
-            await Comments.create({comments: req.body.commentsItem, timeStamp: Date.now(), userId: req.user.id, userName: req.user.userName}) //adds obj to mongo with userid
+            await Comments.create({comments: req.body.commentsItem, timeStamp: Date.now(), userId: req.user.id, userName: req.user.userName, }) //adds obj to mongo with userid
             console.log('Comments has been added!')
             res.redirect('/comments')
         }catch(err){

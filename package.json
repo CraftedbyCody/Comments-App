@@ -20,6 +20,10 @@
     "mongodb": "^3.7.3",
     "mongoose": "^5.13.15",
     "morgan": "^1.10.0",
+<<<<<<< HEAD
+    "node": "^16.17.0",
+=======
+>>>>>>> eca98ba28d13476522cff85a81def355d88a0c2a
     "nodemon": "^2.0.19",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
