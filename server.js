@@ -43,6 +43,25 @@ app.use(flash())
 app.use('/', mainRoutes) //router for root path
 app.use('/comments', commentsRoutes) //router for comments path
 
+// add Likes grab this fom the rapper app
+//app.put('/addOneLike', (request, response) => {
+  // GOT STUCK HERE, WHERE TO CONNECT TO DB
+  //db.collection('rappers').updateOne({stageName: request.body.stageNameS, birthName: request.body.birthNameS,likes: request.body.likesS},{
+  
+  
+  //$set: {
+  //        likes:request.body.likesS + 1
+  //      }
+  //},{
+  //    sort: {_id: -1},
+  //    upsert: true
+  //})
+  //.then(result => {
+  //    console.log('Added One Like')
+  //    response.json('Like Added')
+  //})
+  //.catch(error => console.error(error))
+//})
  
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')
