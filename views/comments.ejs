@@ -17,6 +17,7 @@
 
         <% let displaySet = 30 %>
         <% let currentItems = 0; %>
+        <% comments.reverse() %>
 
         <%  const displayComments = function(x) { x.forEach ( el => { %> 
             <li class='commentItem' data-id='<%=el._id%>'>
