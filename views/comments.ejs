@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Join the conversation...</h1>
+
+    <ul id="comments">
+
+
+
+        <% let displaySet = 30 %>
+        <% let currentItems = 0; %>
+        <% comments.reverse() %>
+
+        <%  const displayComments = function(x) { x.forEach ( el => { %> 
+            <li class='commentItem' data-id='<%=el._id%>'>
+                <div class="commentBody">
+                    <p><%= el.comments %></p>
+                    <div class="attribution">
+                        
+                        <span class="userName"><%= el.userName %></span>
+                        <span class="timestamp"><%= new Date(el.timeStamp * 1).toLocaleString() %></span>
+                    </div>
+                </div>
+
+                <% if (currentUserId == el.userId) { %> <span class='del button'> Delete </span> <% } %>
+
+            </li>
+        
+        <% })} %>
+            
+        <% const displayNext = () => {
+            displayComments(comments.slice(currentItems, currentItems + displaySet));
+    
+            if (!(currentItems + displaySet > comments.length)) {
+                currentItems += displaySet;
+            } else {
+                currentItems += (comments.length - currentItems)
+            }
+        } %>
+
+        <% displayNext() %>
+
+
+            
+
+
+        <span class="showMore button" onclick="test()">Show more</span>
+
+        <div id="test"></div>
+        
+        
+    </ul>
+    <span class="test"></span>
+
+
+    <form action="/comments/createComments" method='POST'>
+        <textarea id="textBox" rows="4" cols="50" placeholder="Enter Comment" name='commentsItem'></textarea>
+        <input class="button" type="submit">
+    </form>
+
+    <a href="/logout"><span class="logout button">Logout</span></a>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

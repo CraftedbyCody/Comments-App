@@ -1,0 +1,168 @@
+/** LAYOUT **/
+
+* {
+    font-size: 16px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #E6E6E6;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background: #297373;
+    height: 14%;
+    width: 100%;
+    padding: 1em;
+}
+
+#auth {
+    margin: 0 0 0 -1em;
+}
+
+#auth li {
+    background: #85FFC7;
+    color: #297373;
+    display: inline-block;
+    font-size: .9em;
+    padding: .5em;
+}
+
+#auth a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#title {
+    
+}
+
+li {
+    list-style: none;
+    width: 60%;
+
+    margin: 0 0 15px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.commentBody {
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px -10px #39393A;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.attribution {
+    display: flex;
+    justify-content: end;
+}
+
+/** ADDITIONAL STYLES **/
+
+h1{
+    margin: 10px 0 20px 30px;
+    color: #39393A;
+    font-size: 2rem;
+}
+
+.timeStamp .userName{
+    font-size: 1.2rem;
+
+}
+
+.userName {
+    color: #297373;
+    font-weight: 600;
+}
+
+
+
+.button {
+
+    border-radius: 3px;
+    height: 30px;
+    width: 120px;
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.logout {
+    background-color: #ef798a;
+}
+
+.del {
+    background-color: #ef798a;
+}
+
+.showMore {
+    background-color: #297373;
+}
+
+.hidden {
+    display: none;
+}
+
+#textBox {
+
+}
+
+/* login  */
+
+.loginContainer{
+    border: 3px solid #297373
+    ;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24em;
+    height: 30em;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 15px 5px #D2D2D2; 
+    box-shadow: 5px 5px 15px 5px #D2D2D2;
+    margin: 0 auto;
+}
+
+#loginSubmitButton{
+    display: block;
+    background-color: #85FFC7;
+    width: 15em;
+    border-radius: 5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.loginAndEmailInput{
+    border: solid 1px black;
+    height: 1.5em;
+    border-radius: 3px;
+    margin-top: 1em;
+    width: 20em; 
+}
+
+.itemsContainer{
+    padding: 1em;
+}
+
+.signinLabel{
+    text-align: center;
+    margin: 0;
+    padding-bottom: 1em;
+}

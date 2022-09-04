@@ -1,0 +1,52 @@
+        <% let displaySet = 3 %>
+        <% let currentItems = 0; %>
+
+        <%  const displayComments = function(x) { x.forEach ( el => { %> 
+            <li class='commentItem' data-id='<%=el._id%>'>
+                <%= el.comments %>
+                <div class="attribution">
+                    <span class="timeStamp"><%= el.timeStamp %></span>
+                    <span class="userName"><%= el.userName %></span>
+                </div>
+
+
+                <% if (currentUserId == el.userId) { %> <span class='del'> Delete </span> <% } %>
+
+            </li>
+        
+        <% })} %>
+            
+        <% const displayNext = () => {
+            displayComments(comments.slice(currentItems, currentItems + displaySet));
+    
+            if (!(currentItems + displaySet > comments.length)) {
+                currentItems += displaySet;
+            } else {
+                currentItems += (comments.length - currentItems)
+            }
+        } %>
+
+        <% displayNext() %>
+
+
+        ------------------------------
+
+
+
+        <% let displaySet = 3 %>
+        <% let currentItems = 0; %>
+
+        <%  const displayComments = comments.forEach ( el => { %> 
+            <li class='commentItem' data-id='<%=el._id%>'>
+                <%= el.comments %>
+                <div class="attribution">
+                    <span class="timeStamp"><%= el.timeStamp %></span>
+                    <span class="userName"><%= el.userName %></span>
+                </div>
+
+
+                <% if (currentUserId == el.userId) { %> <span class='del'> Delete </span> <% } %>
+
+            </li>
+        
+        <% }) %>
