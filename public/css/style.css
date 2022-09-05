@@ -114,6 +114,7 @@ h1{
 
 .showMore {
     background-color: #297373;
+    display: none;
 }
 
 .hidden {
