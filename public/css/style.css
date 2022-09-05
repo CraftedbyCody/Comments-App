@@ -130,7 +130,7 @@ h1{
 .loginContainer{
     border: 3px solid #297373
     ;
-    border-radius: 5px;
+    border-radius: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,22 +140,26 @@ h1{
     -webkit-box-shadow: 5px 5px 15px 5px #D2D2D2; 
     box-shadow: 5px 5px 15px 5px #D2D2D2;
     margin: 0 auto;
+    margin-top: 5em;
 }
 
-#loginSubmitButton{
+#loginSubmitButton , #returnToSignUp{
     display: block;
     background-color: #85FFC7;
     width: 15em;
-    border-radius: 5px;
-    margin-top: 1em;
+    border-radius: 15px;
+    margin-top: 2em;
     margin-bottom: 1em;
+    margin-left: 3em;
+    padding: .5em;
+   
 }
 .loginAndEmailInput{
     border: solid 1px black;
     height: 1.5em;
     border-radius: 3px;
     margin-top: 1em;
-    width: 20em; 
+    width: 22em; 
 }
 
 .itemsContainer{
@@ -166,6 +170,19 @@ h1{
     text-align: center;
     margin: 0;
     padding-bottom: 1em;
+    text-decoration: none;
 }
 
+a:link { text-decoration: none; color:black; }
+a:visited { text-decoration: none;  color:black;}
+a:hover { text-decoration: none;  color:black; }
+a:active { text-decoration: none;  color:black;}
 
+#optionSpan{
+    margin: 166px;
+}
+
+.line1 {
+    height: 1px;
+    background: black;
+  }
