@@ -13,9 +13,7 @@
 
     <ul id="comments">
 
-
-
-        <% let displaySet = 30 %>
+        <% let displaySet = 9999999999999999999999 %>
         <% let currentItems = 0; %>
         <% comments.reverse() %>
 
@@ -30,7 +28,9 @@
                     </div>
                 </div>
 
+              <!--  <% if (currentUserId == el.userId) { %> <span class='fa fa-thumbs-up'></span> <% } %> -->
                 <% if (currentUserId == el.userId) { %> <span class='del button'> Delete </span> <% } %>
+
 
             </li>
         

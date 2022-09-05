@@ -32,6 +32,30 @@ async function deleteComments(){
     }
 }
 
+//ADD ARRAY: each comment will have a like
+//async function addLike(){
+//    const commentsId = this.parentNode.dataset.id
+//    const tLikes = Number(this.parentNode.dataset[5].innerText)
+//    try{
+//        const response = await fetch('comments/addOneLike', {
+//            method: 'put',
+//           headers: {'Content-Type': 'application/json'},
+//            body: JSON.stringify({
+//              'commentsIdFromJSFile': commentsId,
+//              'likesS': tLikes
+//            })
+//          })
+//        const data = await response.json()
+//        console.log(data)
+//        location.reload()
+//
+//    }catch(err){
+//        console.log(err)
+//    }
+//}
+
+
+
 let comments = document.querySelectorAll(".commentItem")
 comments.forEach( x => x.classList.toggle("hidden"))
 

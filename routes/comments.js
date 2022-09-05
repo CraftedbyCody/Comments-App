@@ -12,6 +12,9 @@ router.post('/createComments', commentsController.createComments) // when user s
 
 //router.put('/markIncomplete', commentsController.markIncomplete) //when user marks comments item as incomplete it routes request to controller.
 
+//add like 
+//router.put('/addOneLike', commentsController.addLike) // when user likes comments it routes request to controller.
+
 router.delete('/deleteComments', commentsController.deleteComments) //
 
 module.exports = router
