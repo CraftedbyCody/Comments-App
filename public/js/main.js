@@ -2,9 +2,14 @@ const deleteBtn = document.querySelectorAll('.del')
 const showMoreBtn = document.querySelectorAll('.showMore')
 const commentsItem = document.querySelectorAll('span.not')
 const commentsComplete = document.querySelectorAll('span.completed')
+const likeBtn = document.querySelectorAll('.like')
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteComments)
+})
+
+Array.from(likeBtn).forEach((el)=>{
+    el.addEventListener('click', addLike)
 })
 
 /*Array.from(showMoreBtn).forEach((el)=>{
@@ -27,6 +32,27 @@ async function deleteComments(){
         const data = await response.json()
         console.log(data)
         location.reload()
+    }catch(err){
+        console.log(err)
+    }
+}
+
+
+async function addLike(){
+    const commentsId = this.parentNode.dataset.id
+    // const likes = Number(this.parentNode.childNodes[5].innerText)
+    try{
+        const response = await fetch('comments/addOneLike', {
+            method: 'put',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                'commentsIdFromJSFile': commentsId
+            })
+        })
+        const data = await response.json()
+        console.log(data)
+        location.reload()
+
     }catch(err){
         console.log(err)
     }

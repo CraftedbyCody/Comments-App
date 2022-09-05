@@ -26,7 +26,7 @@ module.exports = {
 
     createComments: async (req, res)=>{
         try{
-            await Comments.create({comments: req.body.commentsItem, timeStamp: Date.now(), userId: req.user.id, userName: req.user.userName}) //adds obj to mongo with userid
+            await Comments.create({comments: req.body.commentsItem, timeStamp: Date.now(), userId: req.user.id, userName: req.user.userName, liked: req.user.liked, likes: req.body.likes}) //adds obj to mongo with userid
             console.log('Comments has been added!')
             res.redirect('/comments')
         }catch(err){
@@ -44,17 +44,17 @@ module.exports = {
             console.log("It screwed up here")
             console.log(err)
         }
-    }
+    },
 
-      // addLike: async (req, res)=>{
-   //     try{
-   //         await Comments.create({comments: req.body.commentsItem, timeStamp: Date.now(), userId: req.user.id, userName: req.user.userName, Like: req.user.Like}) //adds obj to mongo with userid
-   //         console.log('Like has been added!')
-   //         res.redirect('/comments')
-   //     }catch(err){
-   //         console.log(err)
-   //     }
-   // }
+      addLike: async (req, res)=>{
+       try{
+           await Comments.findOneAndUpdate({_id: req.body.commentsIdFromJSFile}, {$inc: {likes: 1}})
+           console.log('Like has been added!')
+           res.redirect('/comments')
+       }catch(err){
+           console.log(err)
+       }
+   }
 }    
 
 

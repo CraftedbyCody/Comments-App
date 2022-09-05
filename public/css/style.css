@@ -88,8 +88,6 @@ h1{
     font-weight: 600;
 }
 
-
-
 .button {
 
     border-radius: 3px;
@@ -110,6 +108,12 @@ h1{
 
 .del {
     background-color: #ef798a;
+}
+
+.likes {
+    color: #297373;
+    font-weight: bold;
+    padding: 0 1rem;
 }
 
 /*.showMore {

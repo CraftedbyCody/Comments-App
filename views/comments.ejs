@@ -30,10 +30,10 @@
 
                             <span class="userName"><%= el.userName %></span>
                             <span class="timestamp"><%= new Date(el.timeStamp * 1).toLocaleString() %></span>
+                            <span class="likes"><%= el.likes %></span>
                         </div>
                     </div>
-
-                  <!--  <% if (currentUserId == el.userId) { %> <span class='fa fa-thumbs-up'></span> <% } %> -->
+                    <% if (el.liked == false) { %> <span class='fa fa-thumbs-up like'>👍</span><% } %>
                     <% if (currentUserId == el.userId) { %> <span class='del button'> Delete </span> <% } %>
 
 
