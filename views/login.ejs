@@ -16,10 +16,11 @@
 <h3>Stay updated on the latest conversations</h3>
     <form action="/login" method="POST">
         <input class="loginAndEmailInput" type="email" name="email" placeholder="Email">
-        <input class="loginAndEmailInput" type="password" name="password" placeholder="Password">
+        <input class="loginAndEmailInput" id="userPass" type="password" name="password" placeholder="Password">
         <input id="loginSubmitButton" type="submit">
         
     </form>
+    <button class="button" onclick="showPassword()">Show Password</span>
 
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
@@ -34,6 +35,10 @@
 
 </div>
 </div>
+
+
+<script src="js/main.js"></script>
+<script src="js/showPass.js"></script>
 </body>
 </html>
 <!-- Glad I learnt about this vs code feature -->
