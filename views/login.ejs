@@ -5,25 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>The Conversation</title>
 </head>
 <body>
    
+    <!-- background test -->
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content">
+      <!-- <h1>Sliding Diagonals Background Effect</h1> -->
+      <div class="loginContainer">
+        <div class="itemsContainer">
+        <h1 class="signinLabel">Log in to rejoin <br> "The Conversation" </h1>
+        <!-- <h3>While you were gone, "The Conversation" continued; see what others said today! </h3> -->
+            <form action="/login" class="formEdit" method="POST">
+                <input class="loginAndEmailInput" type="email" name="email" placeholder="Email">
+                <input class="loginAndEmailInput" id="userPass" type="password" name="password" placeholder="Password">
+                <input id="loginSubmitButton" type="submit" value="Submit">
+                  
+            </form>
+            <button id="showPasswordButton" class="button" onclick="showPassword(), showPassword2()">Show Password</span>
+                <!-- <input type="checkbox" onclick="showPassword(), showPassword2()">  -->
+            
+                <button id="returnToLogin" ><a href="/signup"> Sign-up for an Account</a></button>
+    </div>
 
-<div class="loginContainer">
-<div class="itemsContainer">
-<h1 class="signinLabel">Log In To Rejoin "The Conversation" </h1>
-<h3>While you were gone, "The Conversation" continued; see what others said today! </h3>
-    <form action="/login" method="POST">
-        <input class="loginAndEmailInput" type="email" name="email" placeholder="Email">
-        <input class="loginAndEmailInput" id="userPass" type="password" name="password" placeholder="Password">
-        <input id="loginSubmitButton" type="submit" value="Submit Log In">
-          
-    </form>
-    <button id="showPasswordButton" class="button" onclick="showPassword(), showPassword2()">Show Password</span>
-        <!-- <input type="checkbox" onclick="showPassword(), showPassword2()">  -->
-    
-        <button id="returnToLogin" ><a href="/signup"> Sign-up for an Account</a></button>
+
+
 
 <!-- <br>
 <br>

@@ -14,26 +14,60 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
 }
+/* Styling the landing Home page */
+.landingPage {
+    background: #297373;
+    background: linear-gradient(90deg, #297373 35%, #ff00db 100%);
+    color: #f0f8ff;
+    padding-top: 2.5em;
+    /* width: 600px; */
+    height: auto;
+    min-height: 100vh;
+    /* border: 5px solid #4d4d4d;
+    border-radius: 8px;
+    padding: 15px; */
+  }
 
-nav {
+/* nav {
     background: #297373;
     height: 14%;
     width: 100%;
     padding: 1em;
-}
+} */
 
 #auth {
-    margin: 0 0 0 -1em;
+    margin: 4em 0 0 -1em;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #auth li {
-    background: #85FFC7;
-    color: #297373;
-    display: inline-block;
+    /* background: #85FFC7; */
+    background: #297373;
+    background: linear-gradient(90deg, #297373 35%, #ff00db 100%);
+    /* color: #297373; */
+    box-shadow: 0px 31px 20px -10px #39393A;
+    /* display: inline-block; */
     font-size: .9em;
-    padding: .5em;
+    color: #E6E6E6;
+    padding: 1.5em;
+    transition: 1s;
+    margin: 1em 0 2em;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+#auth li:hover {
+    width: 30%;
+  }
 
 #auth a {
     color: inherit;
@@ -54,8 +88,23 @@ li {
     justify-content: space-between;
 }
 
+/* Comments page container */
+
+.commentContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #39393A;
+    /* background: linear-gradient(90deg, rgba(102,204,51,1) 6%, rgba(0,153,255,1) 100%); */
+}
+.commentPage {
+    color: #E6E6E6;
+    font-size: 1.5em;
+    margin-left: 5%;
+    margin-bottom: 2em;
+}
 .commentBody {
-    background: white;
+    background: #626262;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -65,17 +114,52 @@ li {
     margin-right: 10px;
 }
 
+.commentBody p {
+    color: #E6E6E6;
+}
+
 .attribution {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    padding-top: 3.5em;
+    
+}
+
+.attention {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3.5em;
+    margin: 2em;
+}
+
+.commentForm {
+    margin-top: 3em;
+    margin-left: 5%;
+    margin-bottom: 2em;
 }
 
 /** ADDITIONAL STYLES **/
 
 h1{
     margin: 10px 0 20px 30px;
-    color: #39393A;
-    font-size: 2rem;
+    /* color: #39393A; */
+    color: #E6E6E6;
+    font-size: 2.8em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.subTitle {
+    text-align: center;
+    margin-bottom: 4em;
+    font-weight: 500;
+}
+
+.titlePageText {
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 9em 0 3em 0;
 }
 
 .timeStamp .userName{
@@ -84,7 +168,7 @@ h1{
 }
 
 .userName {
-    color: #297373;
+    color: #ef798a;
     font-weight: 600;
 }
 
@@ -125,53 +209,107 @@ h1{
 
 }
 
-/* login */
+/* login Page */
 
+/* Background animation styling */
 
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #66cc33 50%, #0099ff 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+/* Login container styling */
 .loginContainer, .signUpContainer{
-    border: 3px solid #297373
-    ;
+
     border-radius: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 24em;
-    height: 35em;
-    background-color: white;
+    width: 27em;
+    min-width: 27em;
+    height: 40em;
+    background-color: rgba(255,255,255,.8);
     -webkit-box-shadow: 5px 5px 15px 5px #D2D2D2; 
-    box-shadow: 5px 5px 15px 5px #D2D2D2;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
     margin: 0 auto;
-    margin-top: 5em;
+    margin-top: 11em;
 }
-
+/* submit, show password, sign up button styling */
 #loginSubmitButton ,#returnToLogin, #returnToSignUp, #showPasswordButton, .signupSubmitButton{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     background-color: #85FFC7;
-    width: 15em;
-    border-radius: 15px;
-    margin-top: 2em;
-    margin-bottom: 1em;
-    margin-left: 3em;
+    width: 12em;
+    border-radius: 7px;
+    margin-top: 2.2em;
+    margin-bottom: 1em; 
     padding: .5em;
+    box-shadow: 0px 31px 20px -10px #39393A;
+    transition: 1s;
    
 }
+
+/* Align the form to center */
+.formEdit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling the login form area */
 .loginAndEmailInput{
-    border: solid 1px black;
-    height: 1.5em;
+    box-shadow: 0px 31px 20px -10px #39393A;
+    height: 2em;
     border-radius: 3px;
     margin-top: 1em;
     width: 22em; 
+    text-align: center;
 }
 
 .itemsContainer{
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .signinLabel ,.signUpLabel{
+    font-family:monospace;
     text-align: center;
     margin: 0;
-    padding-bottom: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     text-decoration: none;
+    color: #39393A;
+    font-size: 1.8em;
 }
 
 a:link { text-decoration: none; color:black; }
