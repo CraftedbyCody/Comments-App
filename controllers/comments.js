@@ -45,6 +45,16 @@ module.exports = {
             console.log(err)
         }
     }
+
+      // addLike: async (req, res)=>{
+   //     try{
+   //         await Comments.create({comments: req.body.commentsItem, timeStamp: Date.now(), userId: req.user.id, userName: req.user.userName, Like: req.user.Like}) //adds obj to mongo with userid
+   //         console.log('Like has been added!')
+   //         res.redirect('/comments')
+   //     }catch(err){
+   //         console.log(err)
+   //     }
+   // }
 }    
 
 
