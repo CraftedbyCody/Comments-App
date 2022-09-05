@@ -7,9 +7,9 @@ Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteComments)
 })
 
-Array.from(showMoreBtn).forEach((el)=>{
+/*Array.from(showMoreBtn).forEach((el)=>{
     el.addEventListener('click', showMore)
-})
+})*/
 
 //create two arrays: one for all comments, one for shown comments ?
 //shift() from all comments, push() to shown comments
@@ -56,12 +56,13 @@ async function deleteComments(){
 
 
 
-let comments = document.querySelectorAll(".commentItem")
-comments.forEach( x => x.classList.toggle("hidden"))
+/*let comments = document.querySelectorAll(".commentItem")
+comments.forEach( x => x.classList.toggle("hidden"))*/
 
-function test() {
+/*function test() {
     document.querySelector("#test").innerText+=comments
-}
+}*/
+
 /*
 let displaySet = 5
 let currentItems = 0

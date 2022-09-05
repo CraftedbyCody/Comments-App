@@ -7,69 +7,65 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <h1>This isn't any normal discussion - it's "The Conversation"! </h1>
-    <h3> Today's topic - what to do to rest after a week of coding an app like this ... </h3>
+    <header>
+        <h1>This isn't any normal discussion - it's "The Conversation"! </h1>
+        <h3> Today's topic - what to do to rest after a week of coding an app like this ... </h3>
+    </header>
 
-    <ul id="comments">
+    <section>
+        <ul id="comments">
 
-        <% let displaySet = 9999999999999999999999 %>
-        <% let currentItems = 0; %>
-        <% comments.reverse() %>
+            <% let displaySet = 9999999999999999999999 %>
+            <% let currentItems = 0; %>
+            <% comments.reverse() %>
 
-        <%  const displayComments = function(x) { x.forEach ( el => { %> 
-            <li class='commentItem' data-id='<%=el._id%>'>
-                <div class="commentBody">
-                    <p><%= el.comments %></p>
-                    <div class="attribution">
-                        
-                        <span class="userName"><%= el.userName %></span>
-                        <span class="timestamp"><%= new Date(el.timeStamp * 1).toLocaleString() %></span>
+            <%  const displayComments = function(x) { x.forEach ( el => { %>
+                <li class='commentItem' data-id='<%=el._id%>'>
+                    <div class="commentBody">
+                        <p><%= el.comments %></p>
+                        <div class="attribution">
+
+                            <span class="userName"><%= el.userName %></span>
+                            <span class="timestamp"><%= new Date(el.timeStamp * 1).toLocaleString() %></span>
+                        </div>
                     </div>
-                </div>
 
-              <!--  <% if (currentUserId == el.userId) { %> <span class='fa fa-thumbs-up'></span> <% } %> -->
-                <% if (currentUserId == el.userId) { %> <span class='del button'> Delete </span> <% } %>
-
-
-            </li>
-        
-        <% })} %>
-            
-        <% const displayNext = () => {
-            displayComments(comments.slice(currentItems, currentItems + displaySet));
-    
-            if (!(currentItems + displaySet > comments.length)) {
-                currentItems += displaySet;
-            } else {
-                currentItems += (comments.length - currentItems)
-            }
-        } %>
-
-        <% displayNext() %>
+                  <!--  <% if (currentUserId == el.userId) { %> <span class='fa fa-thumbs-up'></span> <% } %> -->
+                    <% if (currentUserId == el.userId) { %> <span class='del button'> Delete </span> <% } %>
 
 
-            
+                </li>
 
+            <% })} %>
 
-        <span class="showMore button" onclick="test()">Show more</span>
+            <% const displayNext = () => {
+                displayComments(comments.slice(currentItems, currentItems + displaySet));
 
-        <div id="test"></div>
+                if (!(currentItems + displaySet > comments.length)) {
+                    currentItems += displaySet;
+                } else {
+                    currentItems += (comments.length - currentItems)
+                }
+            } %>
+
+            <% displayNext() %>
         
         
-    </ul>
-    <span class="test"></span>
+        </ul>
+    </section>
 
+    <section>
+        <form action="/comments/createComments" method='POST'>
+            <textarea id="textBox" rows="4" cols="50" placeholder="Enter Comment" name='commentsItem'></textarea>
+            <input class="button" type="submit">
+        </form>
 
-    <form action="/comments/createComments" method='POST'>
-        <textarea id="textBox" rows="4" cols="50" placeholder="Enter Comment" name='commentsItem'></textarea>
-        <input class="button" type="submit">
-    </form>
-
-    <a href="/logout"><span class="logout button">Logout</span></a>
+        <a href="/logout"><span class="logout button">Logout</span></a>
+    </section>
  
-
 
     <script src="js/main.js"></script>
 
