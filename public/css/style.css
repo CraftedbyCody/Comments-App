@@ -22,7 +22,7 @@ body {
 /* Styling the landing Home page */
 .landingPage {
     background: #297373;
-    background: linear-gradient(90deg, #297373 35%, #ff00db 100%);
+    background: linear-gradient(90deg, #297373 35%, #ef798a 100%);
     color: #f0f8ff;
     padding-top: 2.5em;
     /* width: 600px; */
@@ -51,7 +51,7 @@ body {
 #auth li {
     /* background: #85FFC7; */
     background: #297373;
-    background: linear-gradient(90deg, #297373 35%, #ff00db 100%);
+    background: linear-gradient(90deg, #297373 35%, #ef798a 100%);
     /* color: #297373; */
     box-shadow: 0px 31px 20px -10px #39393A;
     /* display: inline-block; */
@@ -215,7 +215,7 @@ h1{
 
 .bg {
     animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #66cc33 50%, #0099ff 50%);
+    background-image: linear-gradient(-60deg, #297373 50%, #ef798a 50%);
     bottom:0;
     left:-50%;
     opacity:.5;
