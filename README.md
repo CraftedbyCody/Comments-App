@@ -64,4 +64,6 @@ Use the command `npm start`
  Cody Patrick Franklin - [Github: @CraftedbyCody](https://github.com/CraftedbyCody/) - [Twitter: @CraftedbyCody](https://twitter.com/CraftedbyCody)
  
  Roshanell Francisco - [Github: @Roshanell](https://github.com/Roshanell) - [Twitter: @roshanell](https://twitter.com/roshanell)
+  
+ James Kim - [Github: @soursprite](https://github.com/soursprite) - [Twitter: @soursprite](https://twitter.com/soursprite)
  
