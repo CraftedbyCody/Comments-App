@@ -155,8 +155,6 @@ h1{
     font-weight: 600;
 }
 
-
-
 .button {
 
     border-radius: 3px;
@@ -183,10 +181,16 @@ h1{
     background-color: #ef798a;
 }
 
-.showMore {
+.likes {
+    color: #297373;
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+/*.showMore {
     background-color: #297373;
     display: none;
-}
+}*/
 
 .hidden {
     display: none;

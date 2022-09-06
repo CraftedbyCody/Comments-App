@@ -24,12 +24,17 @@ const CommentSchema = new mongoose.Schema({
   userId: {
     type: String,
     required: true,
+  },
+  likes: {
+    type: Number,
+    required:true,
+    default: 0,
+  },
+  liked: {
+    type: Boolean,
+    required: true,
+    default: false
   }
-
-   //Likes: {
-  //  type: String,
-  //  required: true,
-  // }
 })
 
 module.exports = mongoose.model('Comments', CommentSchema)

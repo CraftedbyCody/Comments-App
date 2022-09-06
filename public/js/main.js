@@ -2,14 +2,19 @@ const deleteBtn = document.querySelectorAll('.del')
 const showMoreBtn = document.querySelectorAll('.showMore')
 const commentsItem = document.querySelectorAll('span.not')
 const commentsComplete = document.querySelectorAll('span.completed')
+const likeBtn = document.querySelectorAll('.like')
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteComments)
 })
 
-Array.from(showMoreBtn).forEach((el)=>{
-    el.addEventListener('click', showMore)
+Array.from(likeBtn).forEach((el)=>{
+    el.addEventListener('click', addLike)
 })
+
+/*Array.from(showMoreBtn).forEach((el)=>{
+    el.addEventListener('click', showMore)
+})*/
 
 //create two arrays: one for all comments, one for shown comments ?
 //shift() from all comments, push() to shown comments
@@ -27,6 +32,27 @@ async function deleteComments(){
         const data = await response.json()
         console.log(data)
         location.reload()
+    }catch(err){
+        console.log(err)
+    }
+}
+
+
+async function addLike(){
+    const commentsId = this.parentNode.dataset.id
+    // const likes = Number(this.parentNode.childNodes[5].innerText)
+    try{
+        const response = await fetch('comments/addOneLike', {
+            method: 'put',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                'commentsIdFromJSFile': commentsId
+            })
+        })
+        const data = await response.json()
+        console.log(data)
+        location.reload()
+
     }catch(err){
         console.log(err)
     }
@@ -56,12 +82,13 @@ async function deleteComments(){
 
 
 
-let comments = document.querySelectorAll(".commentItem")
-comments.forEach( x => x.classList.toggle("hidden"))
+/*let comments = document.querySelectorAll(".commentItem")
+comments.forEach( x => x.classList.toggle("hidden"))*/
 
-function test() {
+/*function test() {
     document.querySelector("#test").innerText+=comments
-}
+}*/
+
 /*
 let displaySet = 5
 let currentItems = 0
