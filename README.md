@@ -32,6 +32,12 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 ---
 
+# Screenshots
+
+![index](https://imgur.com/2ejbU2v.jpg)
+
+---
+
 # Optimizations 
 
 As an MVP, the bare minimum functions of the app are working. However, if we had had more time, there are several things we would have liked to have done, including: 
