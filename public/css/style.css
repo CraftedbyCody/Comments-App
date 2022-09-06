@@ -21,9 +21,17 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
+.bodyIndex {
+    background: linear-gradient(90deg, #297373 35%, #ef798a 100%);
+}
+/*
+
 #body-comments { /* remove this if you do not like the background */
+    /*
     background-color: #39393A;
     background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%),
                         linear-gradient(-45deg, transparent 20%, #297373 25%, transparent 25%),
@@ -31,16 +39,25 @@ body {
                         radial-gradient(#ef798a 2px, transparent 0);
     background-size: 30px 30px, 30px 30px;
 }
+*/
 
 .auth-back{
     background-color:#39393A;
 }
+
+
+header > h1 {
+    color: #39393A;
+}
+
 nav {
-    background: #297373;
+    background: #39393A;
     height: 14%;
     width: 100%;
     padding: 1em;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20em;
 
 }
@@ -50,13 +67,18 @@ nav {
 }
 
 #auth {
-    margin: 0 0 0 -1em;
+    margin: 0 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
 }
 
 #auth li {
     background: #85FFC7;
     color: #297373;
-    display: inline-block;
+
+
     font-size: .9em;
     padding: .5em;
     width: 15em;
@@ -91,6 +113,11 @@ li {
     background-color: #39393A;
  }
 
+
+ h3 {
+    margin-bottom: 15px;
+    color: #E6E6E6;
+ }
  
 #comments {
     margin-left: 20%;
@@ -108,8 +135,8 @@ li {
 }
 
 .comments-form {
-    display: block;
     text-align: center;
+    width: 40%;
 }
 
 .comments-form input {
@@ -117,16 +144,17 @@ li {
 }
 
 textarea {
+    width: 460px;
     outline: none;
   }
+  
 
 #textBox {
     border: 2px solid;
     border-image:   linear-gradient(to right, #297373 25%, #85ffc7 45%, #b6b6b6 55%, #ef798a 75%) 5;
     box-shadow: 0px 5px 20px -10px #bbbbbb;
     border-radius: 5px;
-    width: 47%;
-    margin-right: 4.75%;
+    width: 40%;
 
 }
 .comments-form .button {
@@ -197,10 +225,6 @@ h1{
 }
 
 
-#textBox {
-
-}
-
 /* login */
 
 
@@ -221,7 +245,8 @@ h1{
 }
 
 #loginSubmitButton ,#returnToLogin, #returnToSignUp, #showPasswordButton, .signupSubmitButton{
-    display: block;
+    display: flex;
+    justify-content: center;
     background-color: #85FFC7;
     width: 15em;
     border-radius: 15px;
@@ -244,6 +269,7 @@ h1{
 }
 
 .signinLabel ,.signUpLabel{
+    color: #39393A;
     text-align: center;
     margin: 0;
     padding-bottom: 1em;
@@ -263,3 +289,12 @@ a:active { text-decoration: none;  color:black;}
     height: 1px;
     background: black;
   }
+
+
+section{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}

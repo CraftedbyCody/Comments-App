@@ -10,22 +10,23 @@
 
 <body id="body-comments">
 
-
-    <h1>This isn't any normal discussion - it's "The Conversation"! </h1>
-    <h3> Today's topic - what to do to rest after a week of coding an app like this ... </h3>
-
-
-    <ul id="comments">
-
     <header>
         <h1>This isn't any normal discussion - it's "The Conversation"! </h1>
         <h3> Today's topic - what to do to rest after a week of coding an app like this ... </h3>
     </header>
 
+    <a href="/logout"><span class="logout button">Logout</span></a>
+    <br>
+
     <section>
+        <form class="comments-Form" action="/comments/createComments" method='POST'>
+            <textarea id="textBox" placeholder="Enter Comment" name='commentsItem'></textarea>
+            <input class="button" type="submit">
+        </form>
+
         <ul id="comments">
 
-            <% let displaySet = 9999999999999999999999 %>
+            <% let displaySet = 15 %>
             <% let currentItems = 0; %>
             <% comments.reverse() %>
 
@@ -62,20 +63,9 @@
         
         
         </ul>
+        
     </section>
 
-    <section>
-        <form action="/comments/createComments" method='POST'>
-            <textarea id="textBox" rows="4" cols="50" placeholder="Enter Comment" name='commentsItem'></textarea>
-            <input class="button" type="submit">
-        </form>
-
-
-
-    <form action="/comments/createComments" method='POST'>
-        <textarea id="textBox" rows="4" cols="16" placeholder="Enter Comment" name='commentsItem'></textarea>
-        <input class="button" type="submit">
-    </form>
 
     <a href="/logout"><span class="logout button">Logout</span></a>
 
