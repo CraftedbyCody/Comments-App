@@ -7,10 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="body-comments">
+
 
     <h1>This isn't any normal discussion - it's "The Conversation"! </h1>
     <h3> Today's topic - what to do to rest after a week of coding an app like this ... </h3>
+
 
     <ul id="comments">
 
@@ -62,14 +64,13 @@
     <span class="test"></span>
 
 
+
     <form action="/comments/createComments" method='POST'>
         <textarea id="textBox" rows="4" cols="50" placeholder="Enter Comment" name='commentsItem'></textarea>
         <input class="button" type="submit">
     </form>
 
     <a href="/logout"><span class="logout button">Logout</span></a>
- 
-
 
     <script src="js/main.js"></script>
 
