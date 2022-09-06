@@ -165,7 +165,8 @@ textarea {
 }
 .attribution {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    margin-top: 3em;
 }
 
 /** ADDITIONAL STYLES **/
@@ -209,7 +210,8 @@ h1{
 
 
 .del {
-    background-color: #ef798a;
+    /* background-color: #ef798a; */
+    margin-right: 1em;
 }
 
 .likes {
@@ -247,7 +249,6 @@ h1{
     margin: 0 auto;
     margin-top: 5em;
 }
-/* Restyling the sigup page container height */
 
 
 .whiteText {
