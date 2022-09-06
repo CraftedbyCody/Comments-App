@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-    <title>The Conversation</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -36,23 +35,15 @@
                     <div class="commentBody">
                         <p><%= el.comments %></p>
                         <div class="attribution">
-                            <div class="userTime">
-                                <span class="userName"><%= el.userName %></span>
-                                <span class="timestamp"><%= new Date(el.timeStamp * 1).toLocaleString() %></span>
-                            </div>
-                            <div class="trashLike">
-                                <% if (currentUserId == el.userId) { %> <span class='del '><i class=" fas fa-trash-alt"></i></span> <% } %>
-                                <% if (el.liked == false) { %> <span class=' like'>👍</span><% } %>
-                                <span class="likes"><%= el.likes %></span>
-                            </div>
 
-                           
-                            
-                            
+                            <span class="userName"><%= el.userName %></span>
+                            <span class="timestamp"><%= new Date(el.timeStamp * 1).toLocaleString() %></span>
+                            <span class="likes"><%= el.likes %></span>
                         </div>
                     </div>
-                    
-                    
+                    <% if (el.liked == false) { %> <span class='fa fa-thumbs-up like'>👍</span><% } %>
+                    <% if (currentUserId == el.userId) { %> <span class='del button'> Delete </span> <% } %>
+
 
                 </li>
 
