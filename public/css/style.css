@@ -62,7 +62,9 @@ nav, #headerComments {
     margin-top: 20em;
 }
 
-
+.titleText {
+    margin-bottom: 4em;
+}
 
 .nav-header, .nav-auth {
     text-align: center;
@@ -84,14 +86,14 @@ nav, #headerComments {
     font-size: .9em;
     padding: .5em;
     width: 15em;
-    box-shadow: 3px 3px #ef798a, -1em 0 .4em #E6E6E6;
+    box-shadow: 3px 3px #ef798a, 0em 0 .4em;
     border-radius: 30px;
 }
 
 #auth li:hover {
     background-color: #39393A;
     color: #E6E6E6;
-    transition-duration: 2s;
+    transition-duration: .5s;
 }
 
 #auth a {
@@ -238,13 +240,15 @@ h1{
     flex-direction: column;
     align-items: center;
     width: 24em;
-    height: 35em;
+    height: auto;
     background: #39393A;
     -webkit-box-shadow: 5px 5px 15px 5px #D2D2D2; 
     box-shadow: 5px 5px 15px 5px #D2D2D2;
     margin: 0 auto;
     margin-top: 5em;
 }
+/* Restyling the sigup page container height */
+
 
 .whiteText {
     color: #ffffff;
