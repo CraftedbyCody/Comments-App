@@ -16,13 +16,13 @@ It uses MVC architecture, allowing users to
 
 # Objectives
 
-- "The Conversation" is a beginner level app created to understand how MVC concept and logins are added. 
+"The Conversation" is a beginner level app created to understand how MVC concept and logins are added. 
 
 ---
 
 # Who is this for? 
 
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
+It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
 
 ---
 
@@ -34,11 +34,11 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 # Optimizations 
 
-- As an MVP, the bare minimum functions of the app are working. However, if we had had more time, there are several things we would have liked to have done, including: 
--- Clean up file and code structure, improve CSS styling: styling was one of the last things we did, and in hindsight, we would have been better off tackling that earlier, so that the app would look nicer, have more animations, be fully responsive, etc. This was our biggest weak point at time of MVP release. 
--- Include API to generate random topics: we had the idea to give the comments page a randomly generated topic each day, using an API we found. However, we ran out of time to include it for MVP release. We were very excited about this feature, however, so we will likely implement it post-release. 
--- Make favorites/likes show increments when you press the button: we were able to get the favorites functioning, but we ran out of time to set it up so that the page would reload and show you that your like was added. 
--- Show a limited number of comments at initial load, with button to load more comments: we had originally included a function that would load only five comments at initial page load, to keep the page from growing too large to read easily. This function worked, however, our attempts to link it to a button to be used to load another five comments on each press proved to be much more of a challenge than we anticipated, and we ultimately abandoned the feature. With better understanding of MVC and Express, we would love to add this feature at a later date. 
+As an MVP, the bare minimum functions of the app are working. However, if we had had more time, there are several things we would have liked to have done, including: 
+- Clean up file and code structure, improve CSS styling: styling was one of the last things we did, and in hindsight, we would have been better off tackling that earlier, so that the app would look nicer, have more animations, be fully responsive, etc. This was our biggest weak point at time of MVP release. 
+- Include API to generate random topics: we had the idea to give the comments page a randomly generated topic each day, using an API we found. However, we ran out of time to include it for MVP release. We were very excited about this feature, however, so we will likely implement it post-release. 
+- Make favorites/likes show increments when you press the button: we were able to get the favorites functioning, but we ran out of time to set it up so that the page would reload and show you that your like was added. 
+- Show a limited number of comments at initial load, with button to load more comments: we had originally included a function that would load only five comments at initial page load, to keep the page from growing too large to read easily. This function worked, however, our attempts to link it to a button to be used to load another five comments on each press proved to be much more of a challenge than we anticipated, and we ultimately abandoned the feature. With better understanding of MVC and Express, we would love to add this feature at a later date. 
 
 ---
 
@@ -61,4 +61,4 @@ Use the command `npm start`
 
  # Contributors
 
- Cody Patrick Franklin - [@your_github](https://github.com/your_username) - [@your_twitter](https://twitter.com/your_username)
+ Cody Patrick Franklin - [Github: @CraftedbyCody](https://github.com/CraftedbyCody/) - [Twitter: @CraftedbyCody](https://twitter.com/CraftedbyCody)
