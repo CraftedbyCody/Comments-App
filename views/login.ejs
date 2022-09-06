@@ -8,6 +8,31 @@
     <title>Document</title>
 </head>
 <body>
+   
+
+<div class="loginContainer">
+<div class="itemsContainer">
+<h1 class="signinLabel">Log In To Rejoin "The Conversation" </h1>
+<h3>While you were gone, "The Conversation" continued; see what others said today! </h3>
+    <form action="/login" method="POST">
+        <input class="loginAndEmailInput" type="email" name="email" placeholder="Email">
+        <input class="loginAndEmailInput" id="userPass" type="password" name="password" placeholder="Password">
+        <input id="loginSubmitButton" type="submit" value="Submit Log In">
+          
+    </form>
+    <button id="showPasswordButton" class="button" onclick="showPassword(), showPassword2()">Show Password</span>
+        <!-- <input type="checkbox" onclick="showPassword(), showPassword2()">  -->
+    
+        <button id="returnToLogin" ><a href="/signup"> Sign-up for an Account</a></button>
+
+<!-- <br>
+<br>
+<span id="optionSpan"> or </span>
+<div class="line1"></div> -->
+<!-- 
+
+<button id="returnToLogin" > <a href="/signup"> Sign-up for an Account</a></button> -->
+
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
@@ -18,11 +43,12 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit">
-    </form>
+
+</div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/showPass.js"></script>
 </body>
 </html>
 <!-- Glad I learnt about this vs code feature -->

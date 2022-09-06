@@ -25,6 +25,11 @@ const CommentSchema = new mongoose.Schema({
     type: String,
     required: true,
   }
+
+   //Likes: {
+  //  type: String,
+  //  required: true,
+  // }
 })
 
 module.exports = mongoose.model('Comments', CommentSchema)
