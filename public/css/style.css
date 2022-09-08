@@ -104,6 +104,7 @@ nav, #headerComments {
 li {
     list-style: none;
     width: 60%;
+    
 
     margin: 0 0 15px 5%;
     display: flex;
@@ -136,6 +137,7 @@ li {
     box-shadow: 0px 5px 20px -10px #d7d7da;
     padding: 10px;
     margin-right: 10px;
+    overflow: hidden;
 }
 
 .comments-form {
