@@ -76,3 +76,4 @@ Use the command `npm start`
   
  James Kim - [Github: @soursprite](https://github.com/soursprite) - [Twitter: @soursprite](https://twitter.com/soursprite)
  
+ Kingsley Ogbonna - [Github: @KingsOG] (https://github.com/KingsOG) [Twitter: @KingsleyOG7] (https://twitter.com/KingsleyOG7)
