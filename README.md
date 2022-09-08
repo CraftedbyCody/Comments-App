@@ -32,6 +32,15 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 ---
 
+# Screenshots
+
+<img src="https://i.imgur.com/2ejbU2v.jpeg" width=400 />
+<img src="https://i.imgur.com/vYkiS2y.jpeg" width=400 />
+<img src="https://i.imgur.com/QdzNSnh.jpeg" width=400 />
+<img src="https://i.imgur.com/lnrBgf0.jpeg" width=400 />
+
+---
+
 # Optimizations 
 
 As an MVP, the bare minimum functions of the app are working. However, if we had had more time, there are several things we would have liked to have done, including: 
@@ -62,3 +71,8 @@ Use the command `npm start`
  # Contributors
 
  Cody Patrick Franklin - [Github: @CraftedbyCody](https://github.com/CraftedbyCody/) - [Twitter: @CraftedbyCody](https://twitter.com/CraftedbyCody)
+ 
+ Roshanell Francisco - [Github: @Roshanell](https://github.com/Roshanell) - [Twitter: @roshanell](https://twitter.com/roshanell)
+  
+ James Kim - [Github: @soursprite](https://github.com/soursprite) - [Twitter: @soursprite](https://twitter.com/soursprite)
+ 
