@@ -65,3 +65,4 @@ Use the command `npm start`
  
  Roshanell Francisco - [Github: @Roshanell](https://github.com/Roshanell) - [Twitter: @roshanell](https://twitter.com/roshanell)
  
+Lisa John-Baptiste - [Github: @RascalCatalinaPope](https://github.com/RascalCatalinaPope) - [Twitter: @LeLJB](https://twitter.com/LeLeJB)
