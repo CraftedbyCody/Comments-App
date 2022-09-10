@@ -80,7 +80,9 @@ Use the command `npm start`
 
  Ticia Francisco - [Github: @hydrx](https://github.com/hydrx/) - [Twitter: @elephantscode](https://twitter.com/elephantscode)
  
-Lisa John-Baptiste - [Github: @RascalCatalinaPope](https://github.com/RascalCatalinaPope) - [Twitter: @LeLeLJB](https://twitter.com/LeLeJB)
+ Lisa John-Baptiste - [Github: @RascalCatalinaPope](https://github.com/RascalCatalinaPope) - [Twitter: @LeLeLJB](https://twitter.com/LeLeJB)
 
-Ian Waedemon - [Github: @HalcyonCode](https://github.com/HalcyonCode) - [Twitter: @HaclyoncodeDev](https://twitter.com/HalcyoncodeDev)
+ Ian Waedemon - [Github: @HalcyonCode](https://github.com/HalcyonCode) - [Twitter: @HaclyoncodeDev](https://twitter.com/HalcyoncodeDev)
+
+ Joshua Brown - [Github: @joshua44brown](https://github.com/joshua44brown) - [Twitter: @joshua44brown](https://twitter.com/joshua44brown)
 
