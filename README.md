@@ -83,3 +83,4 @@ Use the command `npm start`
  
 Lisa John-Baptiste - [Github: @RascalCatalinaPope](https://github.com/RascalCatalinaPope) - [Twitter: @LeLeLJB](https://twitter.com/LeLeJB)
 
+Joshua Brown - [Github: @joshua44brown](https://github.com/joshua44brown) - [Twitter: @joshua44brown](https://twitter.com/joshua44brown)
