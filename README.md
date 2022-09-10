@@ -75,11 +75,12 @@ Use the command `npm start`
  Roshanell Francisco - [Github: @Roshanell](https://github.com/Roshanell) - [Twitter: @roshanell](https://twitter.com/roshanell)
   
  James Kim - [Github: @soursprite](https://github.com/soursprite) - [Twitter: @soursprite](https://twitter.com/soursprite)
- 
 
  Kingsley Ogbonna - [Github: @KingsOG] (https://github.com/KingsOG) [Twitter: @KingsleyOG7] (https://twitter.com/KingsleyOG7)
 
  Ticia Francisco - [Github: @hydrx](https://github.com/hydrx/) - [Twitter: @elephantscode](https://twitter.com/elephantscode)
  
 Lisa John-Baptiste - [Github: @RascalCatalinaPope](https://github.com/RascalCatalinaPope) - [Twitter: @LeLeLJB](https://twitter.com/LeLeJB)
+
+Ian Waedemon - [Github: @HalcyonCode](https://github.com/HalcyonCode) - [Twitter: @HaclyoncodeDev](https://twitter.com/HalcyoncodeDev)
 
